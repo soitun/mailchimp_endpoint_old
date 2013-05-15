@@ -1,0 +1,4 @@
+class MailChimpSender
+
+
+end
