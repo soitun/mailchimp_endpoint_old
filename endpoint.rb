@@ -5,18 +5,14 @@ class MailChimpEndpoint < EndpointBase
 
   set :logging, true
 
-  # post '/order_confirmation' do
-  #   order = OrderConfirmation.new(@message[:payload], @message[:message_id], @config)
-  #   process_result *order.consume
-  # end
+  post '/subscribe' do
+    puts @message
+    puts @config
+    process_result 200, {:test => 1}
+  end
 
   # post '/order_cancellation' do
   #   order = OrderCancellation.new(@message[:payload], @message[:message_id], @config)
-  #   process_result *order.consume
-  # end
-
-  # post '/shipment_confirmation' do
-  #   order = ShipmentConfirmation.new(@message[:payload], @message[:message_id], @config)
   #   process_result *order.consume
   # end
 end
