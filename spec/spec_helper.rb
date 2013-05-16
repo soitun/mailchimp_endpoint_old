@@ -3,7 +3,7 @@ require 'bundler'
 
 Bundler.require(:default, :test)
 
-require File.join(File.dirname(__FILE__), '..', 'endpoint.rb')
+require File.join(File.dirname(__FILE__), '..', 'mailchimp_endpoint.rb')
 Dir["./spec/support/**/*.rb"].each {|f| require f}
 
 Sinatra::Base.environment = 'test'

@@ -23,8 +23,8 @@ module Factories
           'year' => "2014"
         }],
         'bill_address' => {
-          'firstname' => 'Santina',
-          'lastname' => 'Quitzon',
+          'firstname' => 'Andrew',
+          'lastname' => 'Hooker',
           'address1' => '5819 Derick Club',
           'address2' => 'Suite 240',
           'city' => 'South William',

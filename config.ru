@@ -2,5 +2,5 @@ require 'rubygems'
 require 'bundler'
 
 Bundler.require(:default)
-require "./endpoint"
+require "./mailchimp_endpoint"
 run MailChimpEndpoint
