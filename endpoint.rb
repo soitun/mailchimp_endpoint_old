@@ -1,4 +1,3 @@
-require File.expand_path(File.dirname(__FILE__) + '/lib/mailchimp_sender')
 Dir['./lib/**/*.rb'].each { |f| require f }
 
 class MailChimpEndpoint < EndpointBase
@@ -6,6 +5,7 @@ class MailChimpEndpoint < EndpointBase
   set :logging, true
 
   post '/subscribe' do
+
     puts @message
     puts @config
     process_result 200, {:test => 1}

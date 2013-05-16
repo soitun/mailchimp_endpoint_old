@@ -52,6 +52,8 @@ GEM
       rb-inotify (>= 0.9)
       rb-kqueue (>= 0.2)
     lumberjack (1.0.3)
+    mailchimp (0.0.8)
+      httparty
     method_source (0.8.1)
     multi_json (1.7.3)
     multi_xml (0.5.3)
@@ -117,7 +119,8 @@ DEPENDENCIES
   endpoint_base!
   foreman
   guard-rspec
-  httparty
+  mailchimp
+  pry
   rack-test
   rb-fsevent (~> 0.9.1)
   rspec
