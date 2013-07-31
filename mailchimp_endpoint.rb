@@ -11,11 +11,20 @@ class MailChimpEndpoint < EndpointBase
     if result[:subscribed]
       process_result 200, merged_response(result)
     else
-      process_result 500, merged_response(result)
+      process_error merged_response(result)
     end
   end
 
   private
+  def process_error(response)
+    case response['code']
+    when 214
+      process_result 200, response
+    else
+      process_result 500, response
+    end
+  end
+
   def order
     @message[:payload]['order']['actual']
   end
